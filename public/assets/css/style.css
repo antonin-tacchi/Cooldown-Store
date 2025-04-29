@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: #0c0c0c;
+    color: white;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.logo-text {
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Navigation centrale */
+.nav-center {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+.nav-item {
+    margin: 0 20px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+/* Bouton de recherche */
+.search-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #6b9aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-icon {
+    height: 20px;
+    width: 20px;
+}
+
+/* Navigation droite (panier et profil) */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon, .user-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;  
+}
+
+.user-icon{
+    margin-left: 40px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 40px 0 20px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer columns layout */
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+/* Column headings */
+.footer h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #6b9aff;
+}
+
+/* Lists in footer */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 14px;
+}
+
+.footer ul li a:hover {
+    color: #6b9aff;
+}
+
+/* Newsletter section */
+.newsletter p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-form button {
+    padding: 10px 15px;
+    background-color: #6b9aff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #5a89ee;
+}
+
+/* Social media section */
+.social-media {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #6b9aff;
+}
+
+/* Payment methods */
+.payment-methods {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.payment-icon {
+    display: inline-block;
+    font-size: 24px;
+    background-color: #222;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Copyright section */
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+/* Small logo in footer */
+.logo-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 8px;
+    border: 1px solid #444;
+    margin-right: 15px;
+    width: 60px;
+}
+
+.line-small {
+    width: 70%;
+    height: 1px;
+    background-color: #888;
+    margin: 1px 0;
+}
+
+.logo-text-small {
+    font-size: 10px;
+    color: #ccc;
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 0 0 50%;
+    }
+    
+    .newsletter {
+        flex: 0 0 100%;
+    }
+    
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-column {
+        flex: 0 0 100%;
+    }
+}
