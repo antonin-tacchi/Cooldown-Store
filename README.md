@@ -1,5 +1,3 @@
-# 🛒 Ma Boutique en Ligne
-
 # 🎮 Cooldown Store
 
 ---
