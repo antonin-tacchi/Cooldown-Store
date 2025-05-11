@@ -13,7 +13,8 @@
     "env": {
       "browser": true,
       "node": true,
-      "es6": true
+      "es6": true,
+      "jest": true
     },
     "extends": [
       "eslint:recommended"
@@ -26,7 +27,8 @@
       "no-console": "warn",
       "no-unused-vars": "warn",
       "semi": ["error", "always"],
-      "quotes": ["error", "both"]
+      "quotes": ["error", "both"],
+      "no-undef": ["error", { "typeof": true }]
     },
     "globals": {
       "__dirname": "readonly",
