@@ -2,8 +2,9 @@ import globals from 'globals';
 
 export default [
   {
+    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: 12,
+      ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
         ...globals.browser,
@@ -19,13 +20,15 @@ export default [
     },
   },
   {
+    files: ['**/*.mjs', '**/*.cjs'],
     languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
       globals: {
         ...globals.node,
         structuredClone: 'readonly',
       },
     },
-    files: ['**/*.mjs', '**/*.cjs'],
     rules: {
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-console': 'off',
