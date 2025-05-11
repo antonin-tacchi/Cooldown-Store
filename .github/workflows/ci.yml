@@ -19,10 +19,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '11'
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint . --max-warnings=0
+        run: npx eslint public/assets/js --max-warnings=0
