@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "lint:php": "phpcs --standard=PSR12 --ignore=app/views/ app/ config/ core/ public/index.php"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^3.12"
-  }
-}
