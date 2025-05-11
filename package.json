@@ -27,6 +27,9 @@
       "no-unused-vars": "warn",
       "semi": ["error", "always"],
       "quotes": ["error", "both"]
+    },
+    "globals":{
+      "__dirname": "readonly"
     }
   }
 }
