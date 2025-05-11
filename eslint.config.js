@@ -8,6 +8,7 @@ export default [
       sourceType: 'module',
       globals: {
         ...globals.browser,
+        structuredClone: 'readonly',
       },
     },
     rules: {
@@ -25,6 +26,7 @@ export default [
       sourceType: 'module',
       globals: {
         ...globals.node,
+        structuredClone: 'readonly',
       },
     },
     rules: {
