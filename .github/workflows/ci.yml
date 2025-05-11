@@ -1,6 +1,5 @@
 name: Continuous Integration
 
-# Trigger the workflow on push and pull requests targeting the 'main' branch
 on:
   push:
     branches:
@@ -9,12 +8,9 @@ on:
     branches:
       - main
 
-# 1. Job to set up the environment, install dependencies, and prepare the code
 jobs:
   setup:
     runs-on: ubuntu-latest
-    name: Setup (Node.js 18)
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -27,11 +23,9 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
 
-  # 2. Job for running linters on JavaScript code
   lint:
     runs-on: ubuntu-latest
     needs: setup
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -47,11 +41,9 @@ jobs:
       - name: Run ESLint (JavaScript)
         run: npm run lint:js
 
-  # 3. Job for running tests on JavaScript code
   test:
     runs-on: ubuntu-latest
     needs: [setup, lint]
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
