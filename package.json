@@ -27,18 +27,15 @@
       "no-console": "warn",
       "no-unused-vars": "warn",
       "semi": ["error", "always"],
-      "quotes": ["error", "both"],
-      "no-undef": [
-        "error", 
-        {
-          "typeof": true,
-          "varsIgnorePattern": "__dirname"
-        }
-      ]
+      "quotes": ["error", "both"]
     },
-    "globals": {
-      "__dirname": "readonly",
-      "require": "readonly"
-    }
+    "overrides": [
+      {
+        "files": ["**/__test__/**/*.js", "**/*.test.js"],
+        "rules": {
+          "no-undef": "off"
+        }
+      }
+    ]
   }
 }
