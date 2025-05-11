@@ -29,7 +29,8 @@
       "quotes": ["error", "both"]
     },
     "globals": {
-      "__dirname": "readonly"
+      "__dirname": "readonly",
+      "require": "readonly"
     }
   }
 }
