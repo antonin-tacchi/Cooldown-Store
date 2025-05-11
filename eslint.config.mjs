@@ -20,7 +20,10 @@ export default [
   },
   {
     languageOptions: {
-      globals: globals.node,
+      globals: {
+        ...globals.node,
+        structuredClone: 'readonly',
+      },
     },
     files: ['**/*.mjs', '**/*.cjs'],
     rules: {
