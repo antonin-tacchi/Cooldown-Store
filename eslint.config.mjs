@@ -7,10 +7,11 @@ export default [
       sourceType: 'module',
       globals: {
         ...globals.browser,
+        structuredClone: 'readonly',
       },
     },
     rules: {
-      'no-unused-vars': 'warn',
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-console': 'off',
       'indent': ['error', 4],
       'quotes': ['error', 'single'],
@@ -26,7 +27,7 @@ export default [
     },
     files: ['**/*.mjs', '**/*.cjs'],
     rules: {
-      'no-unused-vars': 'warn',
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-console': 'off',
       'indent': ['error', 2],
       'quotes': ['error', 'single'],
