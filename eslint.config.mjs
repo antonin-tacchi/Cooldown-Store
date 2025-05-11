@@ -5,13 +5,16 @@ export default [
     languageOptions: {
       ecmaVersion: 12,
       sourceType: 'module',
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        structuredClone: 'readonly',
+      },
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'off',
       'indent': ['error', 4],
-      'quotes': ['error', 'single'],  // Utiliser des guillemets simples
+      'quotes': ['error', 'single'],
       'semi': ['error', 'always'],
     },
   },
@@ -24,7 +27,7 @@ export default [
       'no-unused-vars': 'warn',
       'no-console': 'off',
       'indent': ['error', 2],
-      'quotes': ['error', 'single'],  // Utiliser des guillemets simples
+      'quotes': ['error', 'single'],
       'semi': ['error', 'always'],
     },
   },
