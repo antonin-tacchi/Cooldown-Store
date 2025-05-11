@@ -28,7 +28,13 @@
       "no-unused-vars": "warn",
       "semi": ["error", "always"],
       "quotes": ["error", "both"],
-      "no-undef": ["error", { "typeof": true }]
+      "no-undef": [
+        "error", 
+        {
+          "typeof": true,
+          "varsIgnorePattern": "__dirname"
+        }
+      ]
     },
     "globals": {
       "__dirname": "readonly",
