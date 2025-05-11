@@ -1,21 +1,15 @@
 import globals from 'globals';
 
-const baseGlobals = {
-  ...globals.browser,
-};
-
-// Vérification de support de structuredClone
-if (typeof structuredClone !== 'undefined') {
-  baseGlobals.structuredClone = 'readonly';
-}
-
 export default [
   {
     files: ['**/*.js'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      globals: baseGlobals,
+      globals: {
+        ...globals.browser,
+        structuredClone: true,
+      },
     },
     rules: {
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
@@ -32,7 +26,7 @@ export default [
       sourceType: 'module',
       globals: {
         ...globals.node,
-        ...(typeof structuredClone !== 'undefined' ? { structuredClone: 'readonly' } : {}),
+        structuredClone: true,
       },
     },
     rules: {
