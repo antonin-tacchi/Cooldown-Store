@@ -10,7 +10,9 @@ export default defineConfig([
   },
   {
     files: ["**/*.js"],
-    languageOptions: { sourceType: "script" },
+    languageOptions: {
+      sourceType: "script",
+    },
   },
   {
     files: ["**/*.{js,mjs,cjs}"],
@@ -18,14 +20,10 @@ export default defineConfig([
       globals: {
         ...globals.browser,
         require: "readonly",
-        __dirname: "readonly",
+        describe: "readonly",
+        test: "readonly",
+        expect: "readonly",
       },
-    },
-  },
-  {
-    files: ["**/*.test.js", "**/*.spec.js"],
-    env: {
-      jest: true,
     },
   },
 ]);
