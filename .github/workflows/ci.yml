@@ -1,4 +1,4 @@
-name: ESLint check
+name: CI Cooldown Store
 
 on:
   push:
