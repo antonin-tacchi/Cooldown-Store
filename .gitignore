@@ -1,0 +1,19 @@
+# Node.js dependencies
+node_modules/
+
+# Composer dependencies
+/vendor/
+
+# Temporary files
+*.log
+*.tmp
+
+# IDE generated files (if you use an editor like VSCode)
+.vscode/
+
+# OS generated files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Environment files
+.env
