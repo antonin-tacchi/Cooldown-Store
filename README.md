@@ -43,6 +43,21 @@ Cette boutique en ligne permet de :
 
 ---
 
+## 🚀 Fonctionnalité GitHub Actions Ajoutée
+
+Nous avons intégré **GitHub Actions** pour l’**intégration continue (CI)** afin de garantir que chaque modification du code soit automatiquement testée et validée.
+
+### Ce que fait GitHub Actions pour ce projet :
+- **Configuration CI** : À chaque modification ou ouverture de PR vers la branche `main`, GitHub Actions vérifie la qualité du code avec des étapes de linting et exécute les tests.
+- **Linting** : Nous avons configuré des outils de linting pour vérifier la qualité du code JavaScript (ESLint) et PHP (PHP_CodeSniffer).
+- **Tests** : Des tests unitaires sont exécutés pour garantir la stabilité du projet.
+
+Tu peux suivre le statut de l'intégration continue dans l'onglet **"Actions"** de GitHub pour voir si tout fonctionne correctement.
+
+---
+
+
+
 ## ⚙️ Instructions d'installation
 
 1. **Cloner le dépôt :**
