@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "eslint . --config eslint.config.mjs"
+    "lint": "eslint . --config eslint.config.js"
   },
   "type": "module",
   "devDependencies": {
