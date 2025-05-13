@@ -1,0 +1,10 @@
+{
+  "name": "ton-projet/cooldown-store",
+  "description": "Projet PHP avec PHP_CodeSniffer",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.13"
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  }
+}
