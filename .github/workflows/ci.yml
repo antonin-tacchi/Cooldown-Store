@@ -11,9 +11,8 @@ on:
       - ci
 
 jobs:
-  lint:
+  lint-js:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -28,3 +27,23 @@ jobs:
 
       - name: Run ESLint
         run: npx eslint public/assets/js --max-warnings=0
+
+  lint-php:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Check PHP version
+        run: php -v
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction
+
+      - name: Run PHP_CodeSniffer
+        run: vendor/bin/phpcs --standard=PSR12 --ignore=app/views app/ config/ core/ public/index/
