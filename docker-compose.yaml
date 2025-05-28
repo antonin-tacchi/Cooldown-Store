@@ -1,0 +1,63 @@
+# bloc watch réutilisable
+x-develop: &x-develop
+  watch:
+    - path: .
+      action: sync+restart
+      target: /var/www
+      ignore:
+        - .git/
+        - node_modules/
+        - vendor/
+
+services:
+  # Service Apache + PHP
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cooldown_web
+    ports:
+      - "8083:80"
+    volumes:
+      - .:/var/www
+    working_dir: /var/www
+    depends_on:
+      - mysql
+    environment:
+      - DB_HOST=mysql
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${MYSQL_PASSWORD}
+    develop:
+      <<: *x-develop
+
+  # Service MySQL
+  mysql:
+    image: mysql:8.0
+    container_name: cooldown_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./database.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+
+  # Service phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: cooldown_phpmyadmin
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "8082:80"
+
+volumes:
+  mysql_data:
